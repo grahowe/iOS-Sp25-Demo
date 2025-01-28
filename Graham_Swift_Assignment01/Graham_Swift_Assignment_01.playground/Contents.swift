@@ -44,7 +44,7 @@ print("----------------------")
 // 5. Display the following using a single print statement:
 // "Swift is an intuitive, powerful, and safe programming language designed for iOS and other Apple platforms.
 // It offers modern features, concise syntax, and exceptional performance that developers love."
-print("Swift is an intuitive, powerful, and safe programming language designed for iOS and other Apple platforms. \nIt offers modern features, concise syntax, and exceptional performance that developers love.")
+print("Swift is an intuitive, powerful, and safe programming language designed for iOS and other Apple platforms. It offers modern features, concise syntax, and exceptional performance that developers love.")
 print("----------------------")
 // End of question 5
 
@@ -65,6 +65,7 @@ print("----------------------")
 // For example: "S+w+i+f+t+p+r+o+g+r+a+m+m+i+n+g+i+s+f+u+n"
 var message:String = "Swift programming is fun!"
 var noSpaces:String = message.replacing(" ", with: "")
+print("The number of characters in the string without spaces is \(noSpaces.count)")
 var result = ""
 for char in noSpaces {
     result += "\(char)+"
