@@ -36,6 +36,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Check Status"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sM-tk-gdD"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Wb-5J-8bf">
                                 <rect key="frame" x="76" y="428" width="240" height="128"/>
@@ -51,6 +54,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="gXR-FE-yAG" id="wId-Wy-yBD"/>
+                        <outlet property="photo" destination="3Wb-5J-8bf" id="fvM-1g-TW3"/>
+                        <outlet property="text" destination="pjQ-S2-V5L" id="VRz-48-Dif"/>
+                        <outlet property="textField" destination="koV-2w-bAG" id="qdf-S8-B5l"/>
+                        <outlet property="textInput" destination="koV-2w-bAG" id="Exq-EB-bGb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
