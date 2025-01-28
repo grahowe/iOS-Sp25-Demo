@@ -35,6 +35,8 @@ print("----------------------")
 
 // 4. Write three statements about why Swift is a great language for beginners and developers.
 // Display the first two statements on one line and the third statement on the next line using print statements.
+print("Swift is easy to learn because it has clean syntax, an intuitive design,")
+print("and built-in safety features that help prevent syntax errors.")
 print("----------------------")
 // End of question 4
 
@@ -42,6 +44,7 @@ print("----------------------")
 // 5. Display the following using a single print statement:
 // "Swift is an intuitive, powerful, and safe programming language designed for iOS and other Apple platforms.
 // It offers modern features, concise syntax, and exceptional performance that developers love."
+print("Swift is an intuitive, powerful, and safe programming language designed for iOS and other Apple platforms. \nIt offers modern features, concise syntax, and exceptional performance that developers love.")
 print("----------------------")
 // End of question 5
 
@@ -50,6 +53,9 @@ print("----------------------")
 // Write code to calculate their product and determine how many digits the product contains.
 // Print the result in this format:
 // "The product of <num1> and <num2> is ****, and it has **** digits."
+var num1: Int = 123
+var num2: Int = 456
+print("The product of \(num1) and \(num2) is \(num1 * num2), and it has \((num1 * num2 % 10)) digits")
 print("----------------------")
 // End of question 6
 
@@ -57,6 +63,8 @@ print("----------------------")
 // 7. Create a variable with the value "Swift programming is fun!".
 // Count the total number of characters excluding spaces and print them as individual characters separated by "+".
 // For example: "S+w+i+f+t+p+r+o+g+r+a+m+m+i+n+g+i+s+f+u+n"
+var str: String = "Swift programming is fun!"
+print(str, separator: "+")
 print("----------------------")
 // End of question 7
 
@@ -66,6 +74,9 @@ print("----------------------")
 //Distance = velocity × time
 //Print the result in this format:
 //"The car traveled a distance of **** meters."
+var velocity: Int = 20
+var time: Int = 12
+print("The car traveled a distance of \(velocity * time) meters")
 print("----------------------")
 // End of question 8
 
