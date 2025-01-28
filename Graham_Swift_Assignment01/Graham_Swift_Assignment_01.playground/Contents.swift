@@ -55,7 +55,7 @@ print("----------------------")
 // "The product of <num1> and <num2> is ****, and it has **** digits."
 var num1: Int = 123
 var num2: Int = 456
-print("The product of \(num1) and \(num2) is \(num1 * num2), and it has \((num1 * num2 % 10)) digits")
+print("The product of \(num1) and \(num2) is \(num1 * num2), and it has \(String((num1 * num2)).count) digits")
 print("----------------------")
 // End of question 6
 
@@ -63,8 +63,16 @@ print("----------------------")
 // 7. Create a variable with the value "Swift programming is fun!".
 // Count the total number of characters excluding spaces and print them as individual characters separated by "+".
 // For example: "S+w+i+f+t+p+r+o+g+r+a+m+m+i+n+g+i+s+f+u+n"
-var str: String = "Swift programming is fun!"
-print(str, separator: "+")
+var message:String = "Swift programming is fun!"
+var noSpaces:String = message.replacing(" ", with: "")
+var result = ""
+for char in noSpaces {
+    result += "\(char)+"
+}
+result.removeLast()
+
+// Step 5: Print the result
+print(result)
 print("----------------------")
 // End of question 7
 
