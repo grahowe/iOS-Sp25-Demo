@@ -35,5 +35,3 @@ let result = sumAndAvg(1, 20.5, 3, 4, 10.9)
 print("Sum = \(result.sum)")
 print("Average = \(result.avg)")
 print("Difference = \(result.diff)")
-
-
