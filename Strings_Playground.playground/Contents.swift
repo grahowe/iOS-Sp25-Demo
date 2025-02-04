@@ -53,6 +53,7 @@ print(name.count)
 print(name[name.index(name.endIndex, offsetBy: -4)])
 print(name[name.index(name.startIndex, offsetBy: 3)])
 
+print("\n")
 //STRINGS02
 var shoppingList = "The shopping list contains: "
 var foodItems = "Cheese, Butter, Chocolate Spread"
@@ -82,6 +83,7 @@ clothes.remove(at: clothes.firstIndex(of: "-")!)
 clothes.insert(contentsOf: ", Trousers", at: clothes.endIndex)
 print("\(shoppingList), \(clothes)")
 
+print("\n")
 //STRINGS03
 var course = "44643-Mobile Computing-iOS"
 print(course.count)
@@ -94,3 +96,48 @@ print(course[course.index(course.startIndex, offsetBy: 6)..<course.index(course.
 
 //Display the first word of the title
 print(course[course.index(course.startIndex, offsetBy: 6)..<course.index(course.startIndex, offsetBy: 12)])
+
+print("\n")
+
+//STRINGS04
+//This should be true, so output the true output
+let password = "Demo@123"
+let confirmPassword = "Demo@123"
+if password == confirmPassword{
+    print("Password matches")
+}
+else{
+    print("Password doesn't match")
+}
+
+//This should be false, 2021 != 2020
+let currentYear = "2021"
+var enteredYear = "2020"
+
+if currentYear.elementsEqual(enteredYear) == true{
+    print("Entered year matches with current year")
+}
+else{
+    print("Entered year does not match with current year")
+}
+
+//This should be false, Diesel != Electricity
+var vehiclePoweredBy = "Diesel"
+
+if vehiclePoweredBy != "Electricity"{
+    print("Vehicle is NOT eco-friendly")
+}
+else{
+    print("Vehicle IS eco-friendly")
+}
+
+//This should be true, .lowercased == .lowercased
+let nameGiven = "Anthony Martial"
+var enteredName = "ANTHONY MARTIAL"
+
+if nameGiven.lowercased() == enteredName.lowercased(){
+    print("Entered name and given name matches with each other")
+}
+else{
+    print("Entered name and given name does NOT matchi with each other")
+}
