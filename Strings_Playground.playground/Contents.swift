@@ -53,3 +53,44 @@ print(name.count)
 print(name[name.index(name.endIndex, offsetBy: -4)])
 print(name[name.index(name.startIndex, offsetBy: 3)])
 
+//STRINGS02
+var shoppingList = "The shopping list contains: "
+var foodItems = "Cheese, Butter, Chocolate Spread"
+var clothes = "Socks, T-shirts"
+
+if (clothes.hasPrefix("Socks")){
+    print("The first item in clothes is socks")
+}
+else{
+    print("Socks is not the first item")
+}
+
+print(foodItems.split(separator: ","))
+
+if clothes.contains(","){
+    print("Clothes contains more than one item")
+}
+else{
+    print("Clothes contain only one item")
+}
+
+print(foodItems[foodItems.startIndex..<foodItems.index(foodItems.endIndex, offsetBy: -7)])
+
+clothes.remove(at: clothes.firstIndex(of: "T")!)
+clothes.remove(at: clothes.firstIndex(of: "-")!)
+
+clothes.insert(contentsOf: ", Trousers", at: clothes.endIndex)
+print("\(shoppingList), \(clothes)")
+
+//STRINGS03
+var course = "44643-Mobile Computing-iOS"
+print(course.count)
+
+//Display only course number
+print(course[course.startIndex..<course.index(course.endIndex, offsetBy: -21)])
+
+//Display only the course title
+print(course[course.index(course.startIndex, offsetBy: 6)..<course.index(course.endIndex, offsetBy: 0)])
+
+//Display the first word of the title
+print(course[course.index(course.startIndex, offsetBy: 6)..<course.index(course.startIndex, offsetBy: 12)])
