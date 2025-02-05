@@ -28,9 +28,29 @@ class ViewController: UIViewController {
 
 
     @IBAction func SubmitBtnPressed(_ sender: UIButton) {
+        let name = String(NameOL.text!)
+        let billAmt = Double(BillAmtOL.text!)!
+        let tipIP = Double(TipOL.text!)!
+        let tipIPNum = Double(tipIP)
+        let tip = Double(billAmt * (tipIPNum/100))
+        let totalBill = Double(tip + billAmt)
+        
+        nameLabel.text = "Name: " + name
+        billAmountLabel.text = "Bill Amount: " + String(format: "%.2f", billAmt)
+        tipAmountLabel.text = "Tip Amount: " + String(format: "%.2f", tipIPNum)
+        totalAmountLabel.text = "Total Amount: " + String(format: "%.2f", totalBill)
     }
     
     @IBAction func ResetBtnPressed(_ sender: UIButton) {
+        
+        NameOL.text = ""
+        BillAmtOL.text = ""
+        TipOL.text = ""
+        
+        nameLabel.text = ""
+        billAmountLabel.text = ""
+        tipAmountLabel.text = ""
+        totalAmountLabel.text = ""
     }
 }
 
