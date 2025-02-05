@@ -36,9 +36,9 @@ class ViewController: UIViewController {
         let totalBill = Double(tip + billAmt)
         
         nameLabel.text = "Name: " + name
-        billAmountLabel.text = "Bill Amount: " + String(format: "%.2f", billAmt)
-        tipAmountLabel.text = "Tip Amount: " + String(format: "%.2f", tipIPNum)
-        totalAmountLabel.text = "Total Amount: " + String(format: "%.2f", totalBill)
+        billAmountLabel.text = "Bill Amount: $" + String(format: "%.2f", billAmt)
+        tipAmountLabel.text = "Tip Amount: $" + String(format: "%.2f", tip)
+        totalAmountLabel.text = "Total Amount: $" + String(format: "%.2f", totalBill)
     }
     
     @IBAction func ResetBtnPressed(_ sender: UIButton) {
