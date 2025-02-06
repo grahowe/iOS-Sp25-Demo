@@ -1,6 +1,6 @@
 import Cocoa
 
-//Arrays
+//ARRAYS
 var numbers:[Int] = [2, 3, 4]
 print(numbers)
 
@@ -53,4 +53,92 @@ print("After combining \(oddNumbers)")
 
 print("\n")
 
-//Dictionaries
+//DICTIONARIES
+//Dictionaries are UNORDERED collections of key-value pairs and associations
+//Dictionaries are the equivalent of maps
+//***Keys must be unique values***
+//The latest value is assigned to the key, and if you add another value to a key, it will use the latest entered key
+//For example, if we set MO to Missouri and later Maryville, Maryville would be the default value
+
+var capitals = ["Arkansas":"Little Rock", "Georgia":"Atlanta"]
+print(capitals)
+
+print(capitals.count)
+
+//Output may be different due to how hashing works - this is normal
+var numbersDict = [1:"one", 2:"two", 3:"three"]
+print(numbersDict)
+
+numbersDict[4] = "Four"
+print(numbersDict)
+
+var courses = [44542:"Java", 44560:"Database", 44613:"Data Visualization"]
+
+//Change a key-value's value
+print("Before changing \(courses)")
+courses[44542] = "JavaScript"
+print("After changing \(courses)")
+
+//Print out the value(s) for a key
+print(courses[44542])
+
+//Remove a value
+courses.removeValue(forKey: 44613)
+print(courses)
+
+//Print only the keys in our courses dictionary
+for (key,values) in courses{
+    print(key)
+}
+
+//Print only the values in our courses dictionary
+for (key, values) in courses{
+    print(values)
+}
+
+//Print the keys with their respective values
+for (key, values) in courses{
+    print("\(key) : \(values)")
+}
+
+var hamRadios = ["YaesuHF":"FT891", "YaesuVHF":"FT2200", "Kenwood":"TS660"]
+print(hamRadios)
+
+hamRadios["YaesuHF"] = "FT991"
+print(hamRadios)
+
+print("\n")
+
+//SETS
+//Sets do not allow duplicate outputs and order does not matter
+//They are also unordered collections of data
+var players : Set<String> = ["David Warner", "Virat Kohli", "Kane Williamson", "Steve Smith"]
+print(players.count)
+
+print(players)
+
+print(players.contains("Steve Smith"))
+
+players.insert("Maxwell")
+print(players)
+
+var primeNums : Set<Int> = [2, 3, 5, 7, 11]
+var numList : Set<Int> = [1, 2, 5, 9]
+
+//Again, you'll see that the output is in no order and changes after every execution
+//This, as well, is normal
+var unionSet : Set<Int> = primeNums.union(numList)
+print(unionSet)
+
+var intersectionSet : Set<Int> = primeNums.intersection(numList)
+print(intersectionSet)
+
+var subtractionSet : Set<Int> = primeNums.subtracting(numList)
+print(subtractionSet)
+
+var symmDiffSet : Set<Int> = primeNums.symmetricDifference(numList)
+print(symmDiffSet)
+
+print(primeNums.isSubset(of: numList))
+
+print("\n")
