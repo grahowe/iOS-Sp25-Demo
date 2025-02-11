@@ -45,18 +45,28 @@ class ViewController: UIViewController {
     
     
     @IBAction func prevBtnClicked(_ sender: UIButton) {
+        //decrement the imageIndex
+        imageIndex -= 1
+        
+        //update the course details
+        updateCourseDetails(imageNumber: imageIndex)
+        
+        //next button should be enabled
+        nextBtnOL.isEnabled = true
+        
+        //check if the element is at the end of the array (0), previous button should be disabled if so
+        if (imageIndex == 0){
+            prevBtnOL.isEnabled = false
+        }
     }
     
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-        //increment the image
+        //increment the imageIndex
         imageIndex += 1
         
         //update the course details
-        imageViewOL.image = UIImage(named: courses[imageIndex][0])
-        crsNumOL.text = courses[imageIndex][1]
-        crsTitleOL.text = courses[imageIndex][2]
-        semOfferedOL.text = courses[imageIndex][3]
+        updateCourseDetails(imageNumber: imageIndex)
         
         //previous button should be enabled
         prevBtnOL.isEnabled = true
@@ -65,5 +75,13 @@ class ViewController: UIViewController {
         if (imageIndex == courses.count - 1){
             nextBtnOL.isEnabled = false
         }
+    }
+    
+    //Write a function to take care of the updating call
+    func updateCourseDetails(imageNumber: Int){
+        imageViewOL.image = UIImage(named: courses[imageIndex][0])
+        crsNumOL.text = courses[imageIndex][1]
+        crsTitleOL.text = courses[imageIndex][2]
+        semOfferedOL.text = courses[imageIndex][3]
     }
 }
